@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations en informatique</title>
+</head>
+<body>
+
+    <!--
+    Question 1. Créez une page HTML contenant le titre « Formations en informatique ».
+    -->
+    <h1>Formations en informatique</h1>
+
+    <!--
+    Question 2. Ajoutez une liste non ordonnée présentant les modules suivants :
+    - Développement Web
+    - Réseaux informatiques
+    - Bases de données
+    - Algorithmique
+    -->
+    <h2>Liste des modules</h2>
+    <ul>
+        <li>Développement Web</li>
+        <li>Réseaux informatiques</li>
+        <li>Bases de données</li>
+        <li>Algorithmique</li>
+    </ul>
+
+    <!--
+    Question 3. Ajoutez une liste ordonnée présentant les étapes suivantes :
+    - Inscription
+    - Validation du dossier
+    - Choix de la formation
+    - Confirmation de l'inscription
+    -->
+    <h2>Étapes d'inscription</h2>
+    <ol>
+        <li>Inscription</li>
+        <li>Validation du dossier</li>
+        <li>Choix de la formation</li>
+        <li>Confirmation de l'inscription</li>
+    </ol>
+
+    <!--
+    Question 4. Modifiez la liste précédente afin que la numérotation utilise
+    les chiffres romains : I, II, III, IV.
+    -->
+    <h2>Étapes avec chiffres romains</h2>
+    <ol type="I">
+        <li>Inscription</li>
+        <li>Validation du dossier</li>
+        <li>Choix de la formation</li>
+        <li>Confirmation de l'inscription</li>
+    </ol>
+
+    <!--
+    Question 5. Réalisez une liste imbriquée permettant d'obtenir la structure suivante :
+    Développement Web
+        HTML
+        CSS
+        JavaScript
+    Réseaux informatiques
+        Ethernet
+        TCP/IP
+        Routage
+    Bases de données
+        MySQL
+        Oracle
+    -->
+    <h2>Programme de formation</h2>
+    <ul>
+        <li>Développement Web
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>Réseaux informatiques
+            <ul>
+                <li>Ethernet</li>
+                <li>TCP/IP</li>
+                <li>Routage</li>
+            </ul>
+        </li>
+        <li>Bases de données
+            <ul>
+                <li>MySQL</li>
+                <li>Oracle</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!--
+    Question 6. Le texte de la question 6 n'est pas visible sur les photos fournies.
+    Réponse : aucune réponse ajoutée afin de ne pas inventer l'énoncé.
+    -->
+
+    <!--
+    Question 7. Créez un formulaire d'inscription contenant les champs suivants :
+    - Nom
+    - Prénom
+    -->
+    <h2>Formulaire d'inscription</h2>
+
+    <!--
+    Question 8. Associez un <label> à chacun des champs du formulaire.
+    Réponse : chaque champ ci-dessous possède un label associé à son identifiant.
+    -->
+
+    <!--
+    Question 9. Rendez obligatoires les champs Nom, Prénom, Email et Mot de passe.
+    Réponse : l'attribut required est ajouté à ces quatre champs.
+    -->
+
+    <!--
+    Question 10. Configurez le champ Âge afin qu'il accepte uniquement des valeurs
+    comprises entre 18 et 60 ans.
+    Réponse : utiliser type="number", min="18" et max="60".
+    -->
+
+    <!--
+    Question 11. Ajoutez au formulaire le choix suivant :
+    - Femme
+    - Homme
+    L'utilisateur ne doit pouvoir sélectionner qu'une seule réponse.
+    Réponse : les deux boutons radio utilisent le même attribut name.
+    -->
+
+    <!--
+    Question 12. Ajoutez une section « Niveau d'étude » contenant :
+    - 1ère année
+    - 2ème année
+    - 3ème année
+    Une seule réponse doit pouvoir être sélectionnée.
+    Réponse : une liste <select> permet de choisir une seule option.
+    -->
+
+    <!--
+    Question 13. Ajoutez une section « Technologies maîtrisées » contenant :
+    - HTML
+    - CSS
+    - JavaScript
+    - Python
+    L'utilisateur doit pouvoir sélectionner plusieurs technologies.
+    Réponse : utiliser plusieurs cases à cocher (type="checkbox").
+    -->
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Informations personnelles</legend>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <br><br>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <br><br>
+
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="motdepasse">Mot de passe :</label>
+            <input type="password" id="motdepasse" name="motdepasse" required>
+            <br><br>
+
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance">
+            <br><br>
+
+            <label for="age">Âge (de 18 à 60 ans) :</label>
+            <input type="number" id="age" name="age" min="18" max="60">
+            <br><br>
+
+            <label for="telephone">Numéro de téléphone :</label>
+            <input type="tel" id="telephone" name="telephone">
+            <br><br>
+
+            <fieldset>
+                <legend>Sexe</legend>
+                <input type="radio" id="femme" name="sexe" value="Femme" required>
+                <label for="femme">Femme</label>
+
+                <input type="radio" id="homme" name="sexe" value="Homme">
+                <label for="homme">Homme</label>
+            </fieldset>
+            <br>
+
+            <label for="niveau">Niveau d'étude :</label>
+            <select id="niveau" name="niveau">
+                <option value="1">1ère année</option>
+                <option value="2">2ème année</option>
+                <option value="3">3ème année</option>
+            </select>
+            <br><br>
+
+            <fieldset>
+                <legend>Technologies maîtrisées</legend>
+                <input type="checkbox" id="html" name="technologies[]" value="HTML">
+                <label for="html">HTML</label>
+                <br>
+
+                <input type="checkbox" id="css" name="technologies[]" value="CSS">
+                <label for="css">CSS</label>
+                <br>
+
+                <input type="checkbox" id="javascript" name="technologies[]" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+                <br>
+
+                <input type="checkbox" id="python" name="technologies[]" value="Python">
+                <label for="python">Python</label>
+            </fieldset>
+            <br>
+
+            <!--
+            Les domaines d'intérêt et le choix de filière sont présents dans le code
+            initial fourni, mais leurs énoncés complets ne sont pas visibles sur les photos.
+            Ils sont conservés ci-dessous comme champs complémentaires.
+            -->
+            <fieldset>
+                <legend>Domaines d'intérêt</legend>
+                <input type="checkbox" id="interet-web" name="interets[]" value="Développement Web">
+                <label for="interet-web">Développement Web</label>
+                <br>
+
+                <input type="checkbox" id="interet-reseaux" name="interets[]" value="Réseaux">
+                <label for="interet-reseaux">Réseaux</label>
+                <br>
+
+                <input type="checkbox" id="interet-cybersecurite" name="interets[]" value="Cybersécurité">
+                <label for="interet-cybersecurite">Cybersécurité</label>
+                <br>
+
+                <input type="checkbox" id="interet-ia" name="interets[]" value="Intelligence artificielle">
+                <label for="interet-ia">Intelligence artificielle</label>
+            </fieldset>
+            <br>
+
+            <label for="filiere">Choix de filière :</label>
+            <select id="filiere" name="filiere">
+                <option value="genie-informatique">Génie informatique</option>
+                <option value="reseaux-telecommunications">Réseaux et télécommunications</option>
+                <option value="intelligence-artificielle">Intelligence artificielle</option>
+                <option value="cybersecurite">Cybersécurité</option>
+            </select>
+            <br><br>
+
+            <label for="motivation">Votre motivation :</label>
+            <br>
+            <textarea id="motivation" name="motivation" rows="5" cols="50"
+                      placeholder="Entrez votre motivation ici"></textarea>
+            <br><br>
+
+            <label for="cv">Joindre votre CV :</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+            <br><br>
+
+            <button type="submit">Envoyer</button>
+            <button type="reset">Réinitialiser</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>
