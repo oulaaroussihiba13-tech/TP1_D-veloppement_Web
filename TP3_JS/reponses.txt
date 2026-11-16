@@ -1,0 +1,21 @@
+Nom : OULAAROUSSI
+Prénom : HIBA
+
+==== DESCRIPTIF DU TP_JAVASCRIPT ====
+Ce TP porte sur la programmation JavaScript et la manipulation du DOM : fonctions, boucles, sélection des éléments HTML, événements, mot-clé this, validation d'un formulaire et création d'un objet.
+
+==== Réponse de Question 1 (Exercice 4) ====
+
+Dans un attribut d'événement HTML, this représente l'élément HTML qui
+a déclenché l'événement. 
+Ici, c'est le champ <input id="prenom"> lui-même.
+Il est passé en paramètre à la fonction mettreEnEvidence(champ), qui peut
+ainsi le modifier directement sans avoir besoin
+de le sélectionner à nouveau.
+
+==== Réponse de Question 2 (Exercice 5) ====
+
+Dans une méthode d'objet, this représente l'objet qui appelle la méthode,
+c'est-à-dire l'objet inscription. Ainsi, this.nom, this.profession,
+this.sexe et this.langues permettent d'accéder aux propriétés de l'objet
+inscription pour construire le récapitulatif.
